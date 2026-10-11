@@ -1,0 +1,45 @@
+name: Bug report / 问题报告
+description: Report a reproducible recording or startup problem / 报告可复现的问题
+title: "[Bug]: "
+body:
+  - type: dropdown
+    id: interface
+    attributes:
+      label: Interface / 运行方式
+      options:
+        - Native macOS App / 原生版
+        - Python GUI / Python 版
+        - Documentation / 文档
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: macOS version, Mac chip, FFmpeg version, and Python version if applicable.
+      placeholder: "macOS: ...\nChip: Apple Silicon / Intel\nFFmpeg: ...\nPython (Python GUI only): ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Include what you expected and what happened. Do not paste a private stream URL.
+      placeholder: "1. ...\n2. ...\nExpected: ...\nActual: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs / 脱敏日志
+      description: Remove signed URL parameters, cookies, tokens and private paths. Do not upload recordings.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前
+      options:
+        - label: I checked the troubleshooting guide / 已阅读故障排查文档
+          required: true
+        - label: My logs and screenshots contain no credentials or signed stream URLs / 已去除凭据和直播签名地址
+          required: true

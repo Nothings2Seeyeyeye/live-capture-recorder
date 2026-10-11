@@ -1,0 +1,29 @@
+# OS / Python
+.DS_Store
+.venv*/
+__pycache__/
+*.py[oc]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Recordings and runtime logs should never be committed
+*.mkv
+*.mp4
+*.ts
+*.log
+live_record.log
+*.mov
+*.flv
+*.m4v
+*.m3u8
+*.mkv.broken
+
+# Local upstream checkout; install the casting tool independently
+/wechat-finder-dlna/
+
+# Local credentials
+.env
+.env.*
+!.env.example

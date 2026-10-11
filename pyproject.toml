@@ -1,0 +1,7 @@
+[project]
+name = "live-capture"
+version = "0.1.0"
+description = "macOS live-stream recorder that wraps ffmpeg with a task manager UI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
